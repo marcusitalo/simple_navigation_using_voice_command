@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="assets/favicon.ico" />
+
+    <title>Speech to Text</title>
+    <style>
+      * {
+        margin: 0px auto;
+        padding: 0px auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      style="
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        align-items: center;
+        background-color: #ffffff;
+        padding: 10px;
+        border: 1px solid #000000;
+      "
+    >
+      Comandos:
+      <div style="display: flex; align-items: center; margin-right: 10px">
+        <span style="padding: 5px 3px">↑</span>
+        <label>Subir página</label>
+      </div>
+      <div style="display: flex; align-items: center; margin-right: 10px">
+        <span style="padding: 5px 3px">↓</span>
+        <span>Descer Página</span>
+      </div>
+      <div style="display: flex; align-items: center">
+        <span style="padding: 5px 3px">▣</span>
+        <span>Abrir link: "Titulo do link"</span>
+      </div>
+    </div>
+    <div
+      style="
+        width: 98vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+      "
+    >
+      <h1
+        style="
+          margin: 0px;
+          font-weight: bold;
+          font-size: 5rem;
+          text-align: center;
+        "
+      >
+        BBC News
+      </h1>
+      <a
+        href="https://www.bbc.com/news"
+        style="
+          margin-top: 50px;
+          color: rgb(51, 51, 51);
+          text-decoration: none;
+          font-size: 3rem;
+        "
+        title="BBC News"
+        >https://www.bbc.com/news</a
+      >
+    </div>
+    <div
+      style="
+        width: 98vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+      "
+    >
+      <h1
+        style="
+          margin: 0px;
+          font-weight: bold;
+          font-size: 5rem;
+          text-align: center;
+        "
+      >
+        CNN
+      </h1>
+      <a
+        href="https://www.cnn.com/"
+        style="
+          margin-top: 50px;
+          color: rgb(51, 51, 51);
+          text-decoration: none;
+          font-size: 3rem;
+        "
+        title="CNN"
+        >https://www.cnn.com/</a
+      >
+    </div>
+    <div
+      style="
+        width: 98vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+      "
+    >
+      <h1
+        style="
+          margin: 0px;
+          font-weight: bold;
+          font-size: 5rem;
+          text-align: center;
+        "
+      >
+        Globo
+      </h1>
+      <a
+        href="https://www.globo.com/"
+        style="
+          margin-top: 50px;
+          color: rgb(51, 51, 51);
+          text-decoration: none;
+          font-size: 3rem;
+        "
+        title="Globo"
+        >https://www.globo.com/</a
+      >
+    </div>
+    <div
+      style="
+        width: 98vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+      "
+    >
+      <h1
+        style="
+          margin: 0px;
+          font-weight: bold;
+          font-size: 5rem;
+          text-align: center;
+        "
+      >
+        The New York Times
+      </h1>
+      <a
+        href="https://www.nytimes.com/"
+        style="
+          margin-top: 50px;
+          color: rgb(51, 51, 51);
+          text-decoration: none;
+          font-size: 3rem;
+        "
+        title="The New York Times"
+        >https://www.nytimes.com/</a
+      >
+    </div>
+    <div
+      style="
+        width: 98vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+      "
+    >
+      <h1
+        style="
+          margin: 0px;
+          font-weight: bold;
+          font-size: 5rem;
+          text-align: center;
+        "
+      >
+        The Washington Post
+      </h1>
+      <a
+        href="https://www.washingtonpost.com/"
+        style="
+          margin-top: 50px;
+          color: rgb(51, 51, 51);
+          text-decoration: none;
+          font-size: 3rem;
+        "
+        title="The Washington Post"
+        >https://www.washingtonpost.com/</a
+      >
+    </div>
+    <div
+      style="
+        width: 98vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+      "
+    >
+      <h1
+        style="
+          margin: 0px;
+          font-weight: bold;
+          font-size: 5rem;
+          text-align: center;
+        "
+      >
+        Fox News
+      </h1>
+      <a
+        href="https://www.foxnews.com/"
+        style="
+          margin-top: 50px;
+          color: rgb(51, 51, 51);
+          text-decoration: none;
+          font-size: 3rem;
+        "
+        title="Fox News"
+        >https://www.foxnews.com/</a
+      >
+    </div>
+    <div
+      style="
+        width: 98vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+      "
+    >
+      <h1
+        style="
+          margin: 0px;
+          font-weight: bold;
+          font-size: 5rem;
+          text-align: center;
+        "
+      >
+        The Guardian
+      </h1>
+      <a
+        href="https://www.theguardian.com/international"
+        style="
+          margin-top: 50px;
+          color: rgb(51, 51, 51);
+          text-decoration: none;
+          font-size: 3rem;
+        "
+        title="The Guardian"
+        >https://www.theguardian.com/international</a
+      >
+    </div>
+    <div
+      style="
+        width: 98vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+      "
+    >
+      <h1
+        style="
+          margin: 0px;
+          font-weight: bold;
+          font-size: 5rem;
+          text-align: center;
+        "
+      >
+        Al Jazeera
+      </h1>
+      <a
+        href="https://www.aljazeera.com/"
+        style="
+          margin-top: 50px;
+          color: rgb(51, 51, 51);
+          text-decoration: none;
+          font-size: 3rem;
+        "
+        title="Al Jazeera"
+        >https://www.aljazeera.com/</a
+      >
+    </div>
+    <div
+      style="
+        width: 98vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+      "
+    >
+      <h1
+        style="
+          margin: 0px;
+          font-weight: bold;
+          font-size: 5rem;
+          text-align: center;
+        "
+      >
+        NBC News
+      </h1>
+      <a
+        href="https://www.nbcnews.com/"
+        style="
+          margin-top: 50px;
+          color: rgb(51, 51, 51);
+          text-decoration: none;
+          font-size: 3rem;
+        "
+        title="NBC News"
+        >https://www.nbcnews.com/</a
+      >
+    </div>
+    <div
+      style="
+        width: 98vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        cursor: pointer;
+      "
+    >
+      <h1
+        style="
+          margin: 0px;
+          font-weight: bold;
+          font-size: 5rem;
+          text-align: center;
+        "
+      >
+        CBS News
+      </h1>
+      <a
+        href="https://www.cbsnews.com/"
+        style="
+          margin-top: 50px;
+          color: rgb(51, 51, 51);
+          text-decoration: none;
+          font-size: 3rem;
+        "
+        title="CBS News"
+        >https://www.cbsnews.com/</a
+      >
+    </div>
+
+    <script>
+      // Create a SpeechRecognition object
+      const recognition = new webkitSpeechRecognition();
+
+      // Create a div to display the spoken sentence
+      const spokenSentence = document.createElement("div");
+      spokenSentence.style.position = "fixed";
+      spokenSentence.style.bottom = "20px";
+      spokenSentence.style.right = "20px";
+      spokenSentence.style.backgroundColor = "white";
+      spokenSentence.style.border = "1px solid black";
+      spokenSentence.style.padding = "10px";
+      spokenSentence.style.zIndex = "9999";
+      document.body.appendChild(spokenSentence);
+
+      // Start recognition
+      recognition.start();
+
+      // Event listener for when recognition starts
+      recognition.onstart = () => {
+        console.log("Voice recognition started. Speak now!");
+      };
+
+      // Event listener for when recognition ends
+      recognition.onend = () => {
+        console.log("Voice recognition ended.");
+        // Start recognition again
+        recognition.start();
+      };
+
+      // Event listener for when a speech result is received
+      recognition.onresult = (event) => {
+        // Get the transcript of the speech result
+        const transcript = event.results[0][0].transcript.toLowerCase();
+        console.log("You said:", transcript);
+
+        // Display the spoken sentence in the fixed position div
+        spokenSentence.innerText = `Você disse: ${transcript}`;
+
+        // Check if transcript contains a specific phrase
+        if (transcript.includes("descer página")) {
+          // Perform action - scroll down the page
+          console.log(window.innerHeight);
+          window.scrollBy({
+            top: window.innerHeight,
+            behavior: "smooth",
+          });
+        } else if (transcript.includes("subir página")) {
+          // Perform action - scroll up the page
+          console.log(window.innerHeight);
+          window.scrollBy({
+            top: -window.innerHeight,
+            behavior: "smooth",
+          });
+        } else if (transcript.includes("abrir link")) {
+          // Get all <a> anchor elements
+          const links = document.getElementsByTagName("a");
+          // Create an array of link titles and hrefs
+          const linkData = [];
+          for (let i = 0; i < links.length; i++) {
+            linkData.push({
+              title: links[i].title.toLowerCase(),
+              href: links[i].href,
+            });
+          }
+          console.log(linkData);
+
+          // Find the link title closest to the spoken phrase
+          let closestMatch = "";
+          let closestDistance = Number.MAX_VALUE;
+          for (let i = 0; i < linkData.length; i++) {
+            const distance = levenshteinDistance(transcript, linkData[i].title);
+            if (distance < closestDistance) {
+              closestMatch = linkData[i].href;
+              closestDistance = distance;
+            }
+          }
+          console.log("Closest match:", closestMatch);
+          console.log(
+            "Closest anchor:",
+            linkData.find((link) => link.href === closestMatch).title
+          );
+
+          // Open the closest match in a new tab
+          if (closestMatch !== "") {
+            window.open(closestMatch, "_blank");
+          }
+        }
+      };
+      // Function to calculate Levenshtein distance between two strings
+      function levenshteinDistance(a, b) {
+        if (a.length === 0) return b.length;
+        if (b.length === 0) return a.length;
+
+        const matrix = [];
+
+        for (let i = 0; i <= b.length; i++) {
+          matrix[i] = [i];
+        }
+
+        for (let j = 0; j <= a.length; j++) {
+          matrix[0][j] = j;
+        }
+
+        for (let i = 1; i <= b.length; i++) {
+          for (let j = 1; j <= a.length; j++) {
+            if (b.charAt(i - 1) === a.charAt(j - 1)) {
+              matrix[i][j] = matrix[i - 1][j - 1];
+            } else {
+              matrix[i][j] =
+                Math.min(
+                  matrix[i - 1][j - 1],
+                  matrix[i][j - 1],
+                  matrix[i - 1][j]
+                ) + 1;
+            }
+          }
+        }
+
+        return matrix[b.length][a.length];
+      }
+    </script>
+  </body>
+</html>
